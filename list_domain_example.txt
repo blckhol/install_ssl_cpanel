@@ -1,0 +1,3 @@
+a.domain.com
+domain.com
+abc.domain.com
