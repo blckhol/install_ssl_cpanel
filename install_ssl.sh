@@ -8,10 +8,9 @@ crt=$(printf %s ''$crt_file'' | jq -sRr @uri)
 key=$(printf %s ''$key_file'' | jq -sRr @uri)
 
 while read -r line; do
-    # whmapi1 --output=jsonpretty \
-    #     installssl \
-    #     domain=''$domain'' \
-    #     crt=''$crt'' \
-    #     key=''$key''
-    echo $line
+    whmapi1 --output=jsonpretty \
+        installssl \
+        domain=''$domain'' \
+        crt=''$crt'' \
+        key=''$key''
 done <<<"$list_domain"
