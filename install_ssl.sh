@@ -3,7 +3,7 @@
 dir=$(pwd)
 crt_file=$(cat "$dir"/crt_file.crt)
 key_file=$(cat "$dir"/key_file.key)
-list_domain=$(cat list_domain.txt)
+list_domain=$(cat "$dir"/list_domain.txt)
 crt=$(printf %s ''$crt_file'' | jq -sRr @uri)
 key=$(printf %s ''$key_file'' | jq -sRr @uri)
 
